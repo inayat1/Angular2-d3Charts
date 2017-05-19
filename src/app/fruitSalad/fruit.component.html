@@ -1,0 +1,16 @@
+<div class='wrapper'>
+<h2>Please select the fruit to see the composition</h2>
+<select (change)='fruitSelected($event)'>
+  <option>Select fruit</option>
+  <option value = '{{fruit.name}}' *ngFor="let fruit of allfruits">{{fruit.name}}</option>
+</select>
+<pie-chart [fruitsalad]='allfruits'></pie-chart>
+</div>
+<div class='wrapper'>
+ <h2>Select vitamin to compare the fruits</h2>
+  <select class='vitaminSelect' (change)='vitaminSelected($event)'>
+    <option>Select Vitamin</option>
+    <option value = '{{vit.name}}' *ngFor="let vit of allVitamins">{{vit.name}}</option>
+  </select>
+  <bar-chart [vitaminData]='vitdata' [fruits]='fruitNames'></bar-chart>
+</div>

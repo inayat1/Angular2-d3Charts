@@ -1,0 +1,4 @@
+<h2>Items</h2>
+<ul>
+<li *ngFor='let item of allProducts | filterlist:searchProd'>{{item.name}}<span>{{item.prize}}</span><input [ngClass]="{'product-added':item.added}" type=button value='Buy Now' (click)='buyproduct(item)'/></li>
+</ul>

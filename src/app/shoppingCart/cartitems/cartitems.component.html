@@ -1,0 +1,4 @@
+<ul>
+  <li *ngFor='let item of cartProd'>{{item.name}}<span>{{item.prize}}</span><input type='button' value='Delete from Cart' (click)='deleteItem(item)'/></li>
+</ul>
+<div>{{totalCartPrize}}</div>

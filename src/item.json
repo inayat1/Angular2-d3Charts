@@ -1,0 +1,18 @@
+[{
+  "id":1,
+  "name":"ship",
+  "prize":10
+  },{
+    "id":2,
+    "name":"boat",
+    "prize":20
+    },{
+      "id":3,
+      "name":"plane",
+      "prize":30
+      },{
+        "id":4,
+        "name":"jet",
+        "prize":40
+        }
+      ]

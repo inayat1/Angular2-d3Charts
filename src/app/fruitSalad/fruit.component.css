@@ -1,0 +1,9 @@
+.wrapper {
+  display:inline-block;
+  vertical-align:top;
+  width:49%;
+}
+.vitaminSelect {
+  display:block;
+  margin-bottom:40px;
+}

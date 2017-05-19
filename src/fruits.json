@@ -1,0 +1,18 @@
+[
+  {
+    "name":"Mango",
+    "components":[{"name":"Vitamin-A","per":0.210},{"name":"Vitamin-B","per":0.13},{"name":"Vitamin-C","per":0.053},{"name":"Vitamin-B2","per":0.06}]
+  },
+  {
+    "name":"Kiwi",
+    "components":[{"name":"Vitamin-A","per":0.005},{"name":"Vitamin-B","per":0.12},{"name":"Vitamin-C","per":0.070},{"name":"Vitamin-B2","per":0.02}]
+  },
+  {
+    "name":"Banana",
+    "components":[{"name":"Vitamin-A","per":0.003},{"name":"Vitamin-B","per":0.36},{"name":"Vitamin-C","per":10},{"name":"Vitamin-B2","per":0.03}]
+  },
+  {
+    "name":"Apricot",
+    "components":[{"name":"Vitamin-A","per":0.5},{"name":"Vitamin-B","per":0.06},{"name":"Vitamin-C","per":3},{"name":"Vitamin-B2","per":0.06}]
+  }
+]

@@ -1,0 +1,3 @@
+<input type=text placeholder="Add Event" [(ngModel)]='taskName'/>
+<input type='button' value='Add Task' (click)='addTask()'/>
+<todo-list [list]='totalTask' (deleteNotify)='deleteTask($event)' ></todo-list>
