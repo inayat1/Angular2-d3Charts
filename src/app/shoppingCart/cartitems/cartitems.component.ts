@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'cart-items',
@@ -9,6 +9,9 @@ export class CartItems {
   @Input() cartProd:any;
   @Input() totalCartPrize:any;
   @Output() deletefromcart:EventEmitter<string>=new EventEmitter<string>();
+  constructor(private el:ElementRef){
+    console.log(this.el.nativeElement)
+  };
   deleteItem(item:any) {
     this.deletefromcart.emit(item);
   }

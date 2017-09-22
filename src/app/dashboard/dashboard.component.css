@@ -1,0 +1,32 @@
+div {
+    padding:0;
+    margin:0;
+    display: flex;
+    flex-direction:row;
+    list-style: none;
+    align-items:center;
+    justify-content: center;
+}
+
+div a {
+    text-decoration:none;
+    flex-grow:1;
+    text-align: center;
+    height:200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #333;
+    border: 1px solid #999;
+    border-radius: 10px;
+}
+
+div a:not(:last-of-type) {
+    margin-right: 90px;
+}
+
+div a:hover {
+    background: #eee;
+    box-shadow: 1px 1px 10px #999;
+}

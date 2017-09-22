@@ -1,14 +1,28 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Task } from '../models/tasks';
 
 @Component({
   selector: 'todo-list',
-  templateUrl: 'app/todoList/todolist.component.html'
+  templateUrl: 'app/todoList/todolist.component.html',
+  styleUrls:['./todolist.component.css']
 })
 export class TodoList {
-  @Input() list:any;
-  @Output() deleteNotify:EventEmitter<string> = new EventEmitter<string>();
+  @Input() list:Task[];
+  @Output() deleteNotify:EventEmitter<Task> = new EventEmitter<Task>();
+  @Output() editText:EventEmitter<Task> = new EventEmitter<Task>();
+  @Output() textEdited:EventEmitter<Task> = new EventEmitter<Task>();
+  @Output() taskComplete:EventEmitter<Task> = new EventEmitter<Task>();
 
-    sendMessage(task:any) {
-      this.deleteNotify.emit(task)
+    sendMessage(task:Task) {
+      this.deleteNotify.emit(task);
+    }
+    doubleClick(task:Task) {
+      this.editText.emit(task);
+    }
+    edited(task:Task) {
+      this.textEdited.emit(task);
+    }
+    markCompleted(task:Task) {
+      this.taskComplete.emit(task);
     }
 }

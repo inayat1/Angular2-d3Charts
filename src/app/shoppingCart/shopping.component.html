@@ -1,4 +1,6 @@
 <h2>Shopping Cart</h2>
 <search (searchItem)='itemSearched($event)'></search>
-<item-list (buyclicked)='productSelected($event)' [searchProd]='product' [allProducts]='productArr'></item-list>
+<item-list #itemList (buyclicked)='productSelected($event)' [searchProd]='product' [allProducts]='productArr'>
+    <h2 #hello >Hello</h2>
+</item-list>
 <cart-items (deletefromcart)='enableItem($event)' [totalCartPrize]='totalPrize' [cartProd]='cartItems'></cart-items>
