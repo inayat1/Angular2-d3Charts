@@ -7,8 +7,9 @@ import { Task } from '../models/tasks';
   styleUrls:['./todo.component.css']
 })
 export class Todo {
-  taskName:string;
+  private taskName:String;
   private task:Task[]=[];
+  private categorySelected:String='all';
 
   addTask(){
     this.task.push({taskname:this.taskName,
@@ -18,7 +19,7 @@ export class Todo {
     this.taskName='';
   }
   deleteTask(task:Task){
-    this.task.splice(this.task.indexOf(task),1);
+    this.task = this.task.filter(obj => obj.taskname != task.taskname)
   }
   makeEditable(task:Task) {
     this.task.forEach(obj => {
@@ -40,5 +41,13 @@ export class Todo {
         obj.complete =!obj.complete;
       }
     });
+  }
+
+  updateCategory (category:String) {
+    this.categorySelected = category;
+  }
+
+  deleteCompletedTasks() {
+    this.task = this.task.filter(obj => !obj.complete);
   }
 }

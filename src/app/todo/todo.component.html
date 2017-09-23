@@ -1,5 +1,6 @@
 <div [className]="'todoWrapper'">
     <h1>todos</h1>
     <input [className]="'todoInput'" type="text" placeholder="Add Event" (keyup.enter)='addTask()' [(ngModel)]='taskName'/>
-    <todo-list [list]='task' (taskComplete)="taskStatus($event)" (textEdited)="taskUpdated($event)" (editText)='makeEditable($event)' (deleteNotify)='deleteTask($event)' ></todo-list>
+    <todo-list [showselectedTask]="categorySelected" [list]='task' (taskComplete)="taskStatus($event)" (textEdited)="taskUpdated($event)" (editText)='makeEditable($event)' (deleteNotify)='deleteTask($event)' ></todo-list>
+    <all-categories *ngIf="task.length > 0" (removeCompletedTasks)="deleteCompletedTasks($event)" [list]="task" (selectCategory)="updateCategory($event)"></all-categories>
 </div>

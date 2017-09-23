@@ -1,0 +1,3 @@
+<ul [className]="'todoList'">
+<li *ngFor='let task of list | categoryFilter:showselectedTask;let index = index' (dblclick)="doubleClick(task)" [ngClass]="{'taskComplete':task.complete}" ><span (click)="markCompleted(task)" [ngClass]="{'completed':task.complete}"></span>{{task.taskname}}<span (click)='sendMessage(task)'>x</span><input (keyup.enter)="edited(task)" [ngClass]="{'hidden':!task.editable}" type="text" [(ngModel)]="list[index].taskname" /></li>
+</ul>

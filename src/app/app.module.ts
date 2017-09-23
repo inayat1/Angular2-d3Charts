@@ -9,7 +9,7 @@ import { Barchart }  from './d3/barchart/barchart.component';
 import { Fruitsalad }  from './fruitSalad/fruit.component';
 import { Heading }  from './header/header.component';
 import { Todo }  from './todo/todo.component';
-import { TodoList }  from './todoList/todolist.component';
+import { TodoList }  from './todo/todoList/todolist.component';
 import { ShoppingCart }  from './shoppingCart/shoppingcart.component';
 import { Search }  from './shoppingCart/search/search.component';
 import { Filterlist }  from './shoppingCart/searchFilterPipe';
@@ -20,9 +20,11 @@ import { HttpModule }  from '@angular/http';
 import { routing }  from './app.routes';
 import { HttpService } from './http.service';
 import { OnlyCharacters } from './directives/onlyCharacters';
+import { Catergories } from './todo/categories/categories.component';
+import { CategoryFilter } from './todo/categoryFilter';
 @NgModule({
   imports:      [ BrowserModule, FormsModule, routing, HttpModule],
-  declarations: [ AppComponent,Heading, Dashboard, Todo, TodoList, ShoppingCart, Search, Itemlist, Filterlist, CartItems, Piechart, Fruitsalad, Barchart, OnlyCharacters ],
+  declarations: [ AppComponent,Heading, Dashboard, Todo, TodoList, ShoppingCart, Search, Itemlist, Filterlist, CartItems, Piechart, Fruitsalad, Barchart, OnlyCharacters, Catergories, CategoryFilter ],
   bootstrap:    [ AppComponent ],
   providers: [ ProductList, HttpService ]
 })

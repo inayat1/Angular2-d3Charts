@@ -1,0 +1,30 @@
+.category-wrapper {
+	background:#fff;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+	width:100%;
+	margin:0;
+	padding:10px;
+	box-sizing: border-box;
+}
+.category-wrapper li {
+	display:inline-block;
+	font-famity:arial;
+	color: #4d4d4d;
+}
+.tasks-left {
+	width:30%;
+}
+
+.all-tasks {
+	width: 7%;
+}
+.active-task {
+	width:11%;
+}
+.tasks-completed {
+	width:24%;
+}
+
+.category-wrapper li span {
+	cursor:pointer;
+}
