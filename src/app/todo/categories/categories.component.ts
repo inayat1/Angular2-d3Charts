@@ -9,9 +9,11 @@ import { Task } from '../../models/tasks';
 
 export class Catergories implements OnChanges {
 	@Input() list:Task[];
+	@Input() categoryActive:string;
 	@Output() selectCategory:EventEmitter<String> = new EventEmitter<String>();
 	@Output() removeCompletedTasks:EventEmitter<String> = new EventEmitter<String>();
-	private taskLeft:any = 0;
+	private taskLeft:number;
+	private taskCompleted:number;
 
 	categoryClicked(category:String) {
 		this.selectCategory.emit(category);
@@ -20,12 +22,13 @@ export class Catergories implements OnChanges {
 		this.removeCompletedTasks.emit();
 	}
 	ngOnChanges(changes:any) {
-		//this.taskLeft = 0;
-		console.log(changes);
+		this.taskLeft = 0;
+		this.taskCompleted =0;
 		this.list.forEach(task => {
 			if(!task.complete) {
 				this.taskLeft++;
 			}
-		})
+		});
+		this.taskCompleted = this.list.length-this.taskLeft;
 	}
 }

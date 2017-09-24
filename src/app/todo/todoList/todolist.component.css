@@ -4,7 +4,8 @@
     padding: 14px 16px 16px 60px;
     color:#4d4d4d;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-    background: #fff;   
+    background: #fff;
+    border-top: 1px solid #eee; 
 }
 .todoList li span:first-of-type {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');

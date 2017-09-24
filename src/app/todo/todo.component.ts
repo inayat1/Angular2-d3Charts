@@ -12,10 +12,14 @@ export class Todo {
   private categorySelected:String='all';
 
   addTask(){
-    this.task.push({taskname:this.taskName,
+    this.task = [...this.task,{taskname:this.taskName,
                 editable:false,
                 complete:false,
-              });
+              }];
+   //this.task.push({taskname:this.taskName,
+    //          editable:false,
+      //      complete:false,
+        //    });
     this.taskName='';
   }
   deleteTask(task:Task){
@@ -36,10 +40,11 @@ export class Todo {
     });
   }
   taskStatus(task:Task) {
-     this.task.forEach(obj => {
+     this.task = this.task.map(obj => {
       if(obj === task) {
         obj.complete =!obj.complete;
       }
+      return obj;
     });
   }
 

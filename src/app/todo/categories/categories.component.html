@@ -1,7 +1,7 @@
 <ul [className]="'category-wrapper'">
 	<li [className]="'tasks-left'" >{{taskLeft}} item left</li>
-	<li [className]="'all-tasks'" (click)="categoryClicked('all')" ><span>All</span></li>
-	<li [className]="'active-task'" (click)="categoryClicked('active')" ><span>Active</span></li>
-	<li [className]="'tasks-completed'" (click)="categoryClicked('completed')" ><span>Completed</span></li>
-	<li [className]="'clear-task'" (click)="clearCompleted()" ><span>Clear Completed</span></li>
+	<li [className]="'all-tasks'" (click)="categoryClicked('all')" ><span [ngClass]="{'selection':categoryActive=='all'}">All</span></li>
+	<li [className]="'active-task'" (click)="categoryClicked('active')" ><span [ngClass]="{'selection':categoryActive=='active'}">Active</span></li>
+	<li [className]="'tasks-completed'" (click)="categoryClicked('completed')" ><span [ngClass]="{'selection':categoryActive=='completed'}">Completed</span></li>
+	<li [className]="'clear-task'" *ngIf="taskCompleted" (click)="clearCompleted()" ><span>Clear Completed</span></li>
 </ul>
