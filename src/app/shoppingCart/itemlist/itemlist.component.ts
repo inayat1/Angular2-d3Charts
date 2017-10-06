@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, ContentChild, ElementRef, After
 
 @Component({
   selector: 'item-list',
-  templateUrl: 'app/shoppingCart/itemlist/itemlist.component.html',
-  styleUrls:['app/shoppingCart/itemlist/itemlist.component.css']
+  templateUrl: './itemlist.component.html',
+  styleUrls:['./itemlist.component.css']
 })
 export class Itemlist implements AfterContentInit {
   @ContentChild('hello') hello:ElementRef;

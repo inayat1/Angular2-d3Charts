@@ -4,8 +4,8 @@ import { HttpService } from '../http.service';
 import { Itemlist } from './itemlist/itemlist.component';
 @Component({
   selector: 'shopping-cart',
-  templateUrl: 'app/shoppingCart/shopping.component.html',
-  styleUrls:['app/shoppingCart/shoppingcart.component.css']
+  templateUrl: './shopping.component.html',
+  styleUrls:['./shoppingcart.component.css']
 })
 export class ShoppingCart implements OnInit, AfterViewInit, AfterContentInit {
   private productArr:any;

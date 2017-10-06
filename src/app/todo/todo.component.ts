@@ -3,7 +3,7 @@ import { Task } from '../models/tasks';
 
 @Component({
   selector: 'todo',
-  templateUrl: 'app/todo/todo.component.html',
+  templateUrl: './todo.component.html',
   styleUrls:['./todo.component.css']
 })
 export class Todo {

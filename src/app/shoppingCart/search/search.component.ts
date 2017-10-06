@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'search',
-  templateUrl: 'app/shoppingCart/search/search.component.html'
+  templateUrl: './search.component.html'
 })
 export class Search {
   private itemEntered:any;

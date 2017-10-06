@@ -2,8 +2,8 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { HttpService } from '../http.service';
 @Component({
   selector: 'fruit-salad',
-  templateUrl: 'app/fruitSalad/fruit.component.html',
-  styleUrls:['app/fruitSalad/fruit.component.css']
+  templateUrl: './fruit.component.html',
+  styleUrls:['./fruit.component.css']
 })
 export class Fruitsalad implements OnInit {
   private allfruits:any=[];

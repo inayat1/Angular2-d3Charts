@@ -3,7 +3,7 @@ import { Component, ElementRef ,OnInit , Input, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'bar-chart',
-  templateUrl: 'app/d3/barchart/barchart.component.html'
+  templateUrl: './barchart.component.html'
 })
 export class Barchart implements OnInit, OnChanges{
   @Input() vitaminData:any;

@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/cor
 
 @Component({
   selector: 'cart-items',
-  templateUrl: 'app/shoppingCart/cartitems/cartitems.component.html',
-  styleUrls:['app/shoppingCart/cartitems/cartitems.component.css']
+  templateUrl: './cartitems.component.html',
+  styleUrls:['./cartitems.component.css']
 })
 export class CartItems {
   @Input() cartProd:any;

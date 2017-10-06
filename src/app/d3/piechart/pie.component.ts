@@ -3,7 +3,7 @@ import { Component, ElementRef ,OnInit , Input, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'pie-chart',
-  templateUrl: 'app/d3/piechart/pie.component.html'
+  templateUrl: './pie.component.html'
 })
 export class Piechart implements OnInit, OnChanges{
   @Input() fruitsalad:any;
